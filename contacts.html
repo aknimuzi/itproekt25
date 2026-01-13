@@ -1,0 +1,52 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Контакты — StrawberryHub</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="brand container"><div class="logo-dot"></div><div><h1>StrawberryHub</h1><div style="color:var(--muted);font-size:13px">Frontend Portfolio</div></div></div>
+  <nav class="nav container"><a href="index.html">Главная</a><a href="about.html">О себе</a><a href="contacts.html">Контакты</a><a href="project1.html">Проекты</a></nav>
+</header>
+
+<main class="container">
+  <section class="section">
+    <div class="grid-2">
+      <div>
+        <h2>Связаться со мной</h2>
+        <p class="meta">Оставьте сообщение — я отвечу в течение 2 рабочих дней.</p>
+        <form class="contact-form" name="contact-form">
+          <input name="name" type="text" placeholder="Ваше имя">
+          <input name="email" type="email" placeholder="Email">
+          <textarea name="message" rows="6" placeholder="Сообщение"></textarea>
+          <button class="btn" type="submit">Отправить</button>
+        </form>
+
+        <div style="margin-top:18px">
+          <h4>Прямые ссылки</h4>
+          <p><a href="https://t.me/" target="_blank">Telegram</a></p>
+          <p><a href="mailto:example@mail.com">Email</a></p>
+          <p><a href="https://github.com/" target="_blank">GitHub</a></p>
+          <p><a href="https://www.linkedin.com/" target="_blank">LinkedIn</a></p>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>Где я</h3>
+        <p class="meta">Город — по желанию. Ниже карта (статичная/iframe).</p>
+        <div style="margin-top:12px;border-radius:10px;overflow:hidden">
+          <iframe width="100%" height="220" frameborder="0" style="border:0" src="https://www.google.com/maps?q=Berlin&output=embed" allowfullscreen></iframe>
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="footer container">© 2025 Александр</footer>
+<script src="scripts.js"></script>
+</body>
+</html>

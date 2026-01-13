@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shop SPA</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+<header class="header">
+  <div class="brand container"><div class="logo-dot"></div><div><h1>StrawberryHub</h1></div></div>
+  <nav class="nav container"><a href="index.html">Главная</a><a href="about.html">О себе</a><a href="contacts.html">Контакты</a><a href="projects.html">Проекты</a></nav>
+</header>
+<main class="container">
+  <div id="root"></div>
+</main>
+<footer class="footer container">© 2025 Александр</footer>
+
+<script type="text/babel">
+function LearnApp() {
+  const [lessons, setLessons] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts?_limit=5")
+      .then(res => res.json())
+      .then(data => setLessons(data));
+  }, []);
+
+  return (
+    <div>
+      <h2>LearnApp</h2>
+      <div className="project-grid">
+        {lessons.map(l => (
+          <div className="card" key={l.id}>
+            <h3>{l.title}</h3>
+            <p>{l.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+ReactDOM.render(<LearnApp/>, document.getElementById("root"));
+</script>
+</body>
+</html>

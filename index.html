@@ -1,0 +1,89 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>StrawberryHub — Портфолио</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header">
+  <div class="brand container">
+    <div class="logo-dot"></div>
+    <div>
+      <h1>StrawberryHub</h1>
+      <div style="color:var(--muted);font-size:13px">Frontend | UI-focused portfolio</div>
+    </div>
+  </div>
+  <nav class="nav container">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О себе</a>
+    <a href="contacts.html">Контакты</a>
+    <a href="projects.html">Проекты</a>
+  </nav>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <h2>Привет! Я — Александр, фронтенд-разработчик</h2>
+      <p class="lead">Создаю аккуратные, современные интерфейсы на HTML/CSS и React. Специализируюсь на адаптивной верстке и удобных пользовательских сценариях.</p>
+      <div class="cta-row">
+        <a class="btn" href="project1.html">Посмотреть работы</a>
+        <a class="btn secondary" href="about.html">О себе</a>
+      </div>
+
+      <div class="section" style="margin-top:22px">
+        <h3>Коротко о себе</h3>
+        <p class="meta">Фронтенд | UI | React</p>
+        <p style="margin-top:8px;color:var(--muted)">Опыт создания учебных интерфейсов, лендингов и небольших SPA. В проектах соблюдается единый дизайн, доступность и адаптивность.</p>
+      </div>
+    </div>
+
+    <div class="avatar-wrap">
+      <div class="avatar"><img src="assets/avatar.svg" alt="Avatar"></div>
+      <div style="margin-top:14px;color:var(--muted)">Фронтенд-разработчик</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h3>Проекты</h3>
+    <div class="projects">
+      <div class="project-card" data-title="Landing FreshStore" data-desc="Адаптивный лендинг — задача: создать простой продающий дизайн">
+        <img src="assets/screenshot1.png" alt="p1">
+        <h4>FreshStore — Landing</h4>
+        <div class="meta">HTML • CSS • JS</div>
+      </div>
+      <div class="project-card" data-title="Shop SPA" data-desc="Интернет-магазин на React с корзиной и фильтрами">
+        <img src="assets/project2.png" alt="p2">
+        <h4>Shop SPA</h4>
+        <div class="meta">React • Context • CSS Modules</div>
+      </div>
+      <div class="project-card" data-title="LearnApp" data-desc="Учебное React-приложение с карточками и API">
+        <img src="assets/project3.png" alt="p3">
+        <h4>LearnApp</h4>
+        <div class="meta">React • Hooks • Fetch API</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- modal -->
+<div id="project-modal" class="section" style="position:fixed;inset:0;display:none;align-items:center;justify-content:center;backdrop-filter: blur(4px);">
+  <div style="max-width:900px;width:90%;background:linear-gradient(180deg, rgba(11,18,32,0.95), rgba(11,18,32,0.98));padding:20px;border-radius:12px;position:relative">
+    <button class="modal-close" style="position:absolute;right:14px;top:14px;background:transparent;border:none;color:var(--muted);font-size:20px;cursor:pointer">✕</button>
+    <h3 class="modal-title"></h3>
+    <img class="modal-img" src="" alt="" style="width:100%;height:380px;object-fit:cover;border-radius:8px;margin-top:12px">
+    <p class="modal-desc" style="color:var(--muted);margin-top:12px"></p>
+  </div>
+</div>
+
+<footer class="footer container">
+  © 2025 Александр — Frontend Portfolio • crafted with ❤️
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
